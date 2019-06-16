@@ -1,0 +1,19 @@
+
+eureka:
+  client:
+    service-url:
+      # 注册中心地址
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/,http://${eureka-rs1.hostname}:${eureka-rs1.port}/eureka/,http://${eureka-rs2.hostname}:${eureka-rs2.port}/eureka/
+      # 不对自己注册
+    register-with-eureka: true
+  server:
+    # 关闭自我保护,如果不在线的服务会被服务中心直接剔除不保留 开发模式使用,生产环境禁止
+    enable-self-preservation: true
+  instance:
+    # 注册中心打开后的链接
+    appname: ${spring.application.name}
+spring:
+  application:
+    #服务名字
+    name: eureka
+
