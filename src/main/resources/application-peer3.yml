@@ -13,7 +13,9 @@ eureka:
     enable-self-preservation: false
   instance:
     # 注册中心打开后的链接
-    hostname: peer3
+#    hostname: peer3
+    ip-address: true
+
 spring:
   application:
     #服务名字
