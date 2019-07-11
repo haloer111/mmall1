@@ -1,0 +1,16 @@
+version: "3.6"
+services:
+  eureka:
+    image: 192.168.2.169/demo/springcloud/eureka:latest
+    deploy:
+      endpoint_mode: vip
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: "128M"
+    ports:
+      - 8761:8761
+networks:
+  default:
+    external:
+      name: aojing-overlay
