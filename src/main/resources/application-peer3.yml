@@ -14,7 +14,7 @@ eureka:
   instance:
     # 注册中心打开后的链接
 #    hostname: peer3
-    ip-address: true
+    prefer-ip-address: true
 
 spring:
   application:
