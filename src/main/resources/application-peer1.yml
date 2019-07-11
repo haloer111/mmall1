@@ -5,7 +5,7 @@ eureka:
   client:
     service-url:
       # 注册中心地址
-      defaultZone: http://127.0.0.1:8762/eureka/,http://127.0.0.1:8763/eureka/
+      defaultZone: http://eureka2:8762/eureka/,http://eureka3:8763/eureka/
       # 不对自己注册
     register-with-eureka: true
   server:
